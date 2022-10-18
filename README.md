@@ -9,4 +9,8 @@ In this bootcamp challenge, students were tasked with modifying a starter code t
 
 Copy and past the link in the address bar. 
 
+https://ceca24.github.io/personal-daily-planner/
+
 The webpage will look similar to the screenshot:
+
+![image](https://user-images.githubusercontent.com/112586917/196322993-99472d5a-eae6-4a0c-b417-3ab37e14a42b.png)
