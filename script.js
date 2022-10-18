@@ -3,7 +3,7 @@ var myDay = [
     {
         id: "0",
         hour: "9",
-        time: "9",
+        time: "09",
         meridiem: "am",
         reminder: ""
     },
@@ -30,35 +30,35 @@ var myDay = [
     },
     {
         id: "4",
-        hour: "1",
+        hour: "01",
         time: "13",
         meridiem: "pm",
         reminder: ""
     },
     {
         id: "5",
-        hour: "2",
+        hour: "02",
         time: "14",
         meridiem: "pm",
         reminder: ""
     },
     {
         id: "6",
-        hour: "3",
+        hour: "03",
         time: "15",
         meridiem: "pm",
         reminder: ""
     },
     {
         id: "7",
-        hour: "4",
+        hour: "04",
         time: "16",
         meridiem: "pm",
         reminder: ""
     },
     {
         id: "8",
-        hour: "5",
+        hour: "05",
         time: "17",
         meridiem: "pm",
         reminder: ""
