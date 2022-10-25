@@ -13,4 +13,5 @@ https://ceca24.github.io/personal-daily-planner/
 
 The webpage will look similar to the screenshot:
 
+![image](https://user-images.githubusercontent.com/112586917/197675887-9e79e508-ce32-4daf-b131-ddc40977858e.png)
 
