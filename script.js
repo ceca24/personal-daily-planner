@@ -1,20 +1,20 @@
-// a variable made to display the date at the top of the screen
+//a variable made to display the date at the top of the screen
 var currentDay = $("#currentDay");
 currentDay.text(moment().format("dddd, MMM Do, YYYY"));
 
-// a variable to check the local time to color code the blocks of time
+//a variable to check the local time to color code the blocks of time
 var currentTime = moment().hour();
 
 
-// overlying function to run the program every minute to keep it updated.
+//this overlying function is to run the program every minute to keep it updated.
 function updateTime() {
 
-  // function to color-code the time blocks
+  //this function is to colorcode the time blocks
   $(".time-block").each(function () {
-    var scheduleTime = $(this).attr("id");
+    var schedulerTime = $(this).attr("id");
    
 
-    if (scheduleTime < currentTime) {
+    if (schedulerTime < currentTime) {
       $(this).children("textarea").addClass("past");
     } else if (scheduleTime == currentTime) {
       $(this).children("textarea").addClass("present");
@@ -23,14 +23,14 @@ function updateTime() {
     }
   });
 
-  // setting a variable for the time blocks using Jquery
-  var timeBlocks = $(".time-block")
+  //this sets a variable for the time blocks using Jquery
+  var hours = $(".time-block")
 
-  // for loop to cycle through the time blocks
-  for (let index = 0; index < timeBlocks.length; index++) {
-    const element = timeBlocks[index];
+  //this for loop to cycle through the time blocks
+  for (let index = 0; index < hours.length; index++) {
+    const element = hours[index];
 
-    // grabbing the item set in local storage using the key
+    //these line of codes grab the item set in local storage
     var timeId = $(element).attr("id");
     var timeValue = localStorage.getItem(timeId);
     if (timeValue)
@@ -39,11 +39,11 @@ function updateTime() {
   
 
 }
-// calling the function to run the program every minute
+//this is to call the function to run the program every minute
 updateTime()
 setInterval(updateTime, 60000)
 
-// click event to store the item in local storage 
+//this click event is to store the item in local storage 
 $(".saveBtn").on("click", function () {
   
   var key = $(this).parent().attr("id");
