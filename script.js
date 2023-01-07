@@ -6,17 +6,14 @@ var currentDate = moment().format("dddd, MMM Do, YYYY");
 var currentTime = moment().hour();
 
 
-//this overlying function is to run the program every minute to keep it updated.
-function updateTime() {
-
-  //this function is to colorcode the time blocks
+  //function to colorcode the time blocks
   $(".time-block").each(function () {
-    var schedulerTime = $(this).attr("id");
+    var schedulingTime = $(this).attr("id");
    
 
-    if (schedulerTime < currentTime) {
+    if (schedulingTime < currentTime) {
       $(this).children("textarea").addClass("past");
-    } else if (scheduleTime == currentTime) {
+    } else if (schedulingTime == currentTime) {
       $(this).children("textarea").addClass("present");
     } else {
       $(this).children("textarea").addClass("future");
@@ -26,22 +23,14 @@ function updateTime() {
   //this sets a variable for the time blocks using Jquery
   var hours = $(".time-block")
 
-  //this for loop to cycle through the time blocks
-  for (let index = 0; index < hours.length; index++) {
-    const element = hours[index];
-
-    //these line of codes grab the item set in local storage
-    var timeId = $(element).attr("id");
-    var timeValue = localStorage.getItem(timeId);
-    if (timeValue)
-      $(element).children(".description").val(timeValue)
-  }
+  $(document).ready(function () {
+    $(".saveBtn").on("click", function () {
+      
+      var text = $(this).siblings(".description").val();
+      var time = $(this).parent().attr("id");
   
-
-}
-//this is to call the function to run the program every minute
-updateTime()
-setInterval(updateTime, 60000)
+      localStorage.setItem(time, text);
+    })});
 
 //this click event is to store the item in local storage 
 $(".saveBtn").on("click", function () {
