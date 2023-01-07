@@ -10,7 +10,7 @@ var currentTime = moment().hour();
   $(".time-block").each(function () {
     var schedulingTime = $(this).attr("id");
    
-
+ 
     if (schedulingTime < currentTime) {
       $(this).children("textarea").addClass("past");
     } else if (schedulingTime == currentTime) {
