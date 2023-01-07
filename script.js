@@ -1,8 +1,8 @@
-//a variable made to display the date at the top of the screen
-var currentDay = $("#currentDay");
-currentDay.text(moment().format("dddd, MMM Do, YYYY"));
+//this is used to display the date at the top of the screen
+var currentDate = moment().format("dddd, MMM Do, YYYY");
+  $("#currentDay").text(currentDate);
 
-//a variable to check the local time to color code the blocks of time
+//this is used to check the local time to color code the blocks of time
 var currentTime = moment().hour();
 
 
